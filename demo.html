@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>jquery.textcount.js demo page</title>
+  <style>
+    body {
+      color: #000;
+      background: #fff;
+    }
+    li {
+      margin-bottom: 2em;
+    }
+    .hint {
+      display: block;
+      color: #999;
+      font-style: italic;
+    }
+    .hint.error {
+      color: #f00;
+    }
+  </style>
+</head>
+<body>
+
+<form>
+  <ul>
+    <li>maxlength (incl html)<br>
+      <textarea cols="30" rows="4" maxlength="40">&lt;p&gt;hello&lt;/p&gt;</textarea></li>
+    <li>maxvisible (ignore html)<br>
+      <textarea cols="30" rows="4" data-tc-ignore-html="true" data-tc-max-visible="40">&lt;p&gt;hello&lt;/p&gt;</textarea></li>
+    <li>no max (incl html)<br>
+      <textarea cols="30" rows="4">&lt;p&gt;hello&lt;/p&gt;</textarea></li>
+    <li>no max (ignore html)<br>
+      <textarea cols="30" rows="4" data-tc-ignore-html="true">&lt;p&gt;hello&lt;/p&gt;</textarea></li>
+
+  </ul>
+  <ul>
+    <li>no max (ignore html) - incomplete html<br>
+      <textarea cols="30" rows="4" data-tc-ignore-html="true">&lt;p&gt;hello&lt;/p</textarea></li>
+    <li>no max (ignore html) - input type=text<br>
+      <input type="text" data-tc-ignore-html="true"></li>
+  </ul>
+</form>
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="jquery.textcount.js"></script>
+  <script>
+    $('textarea,input').textcount();
+  </script>
+
+</body>
+</html>
