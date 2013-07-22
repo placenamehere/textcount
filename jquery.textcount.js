@@ -36,10 +36,10 @@
           err = false;
 
       // STEP 1: Draw hint box
-      if ($next && $next.is('.hint')) {
+      if ($next && $next.is('.tc-hint')) {
         $hint = $next;
       } else {
-        $hint = $('<span class="hint">HINT!</span>').insertAfter($el);
+        $hint = $('<span class="tc-hint">HINT!</span>').insertAfter($el);
       }
 
       // STEP 2: Determine type of counting
@@ -79,16 +79,16 @@
 
 
       if (err) {
-        $hint.addClass('error');
+        $hint.addClass('tc-error');
       } else {
-        $hint.removeClass('error');
+        $hint.removeClass('tc-error');
       }
 
 
       // STEP 4: Watch for changes
       $el.keyup(function(e){
         var $el = $(this),
-            $hint = $el.next('.hint'),
+            $hint = $el.next('.tc-hint'),
             maxLength = $el.attr('maxlength'),
             maxVisible = $el.data('tc-max-visible'),
             c,
@@ -127,9 +127,9 @@
 
 
         if (err) {
-          $hint.addClass('error');
+          $hint.addClass('tc-error');
         } else {
-          $hint.removeClass('error');
+          $hint.removeClass('tc-error');
         }
 
       });
