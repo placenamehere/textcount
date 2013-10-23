@@ -1,0 +1,27 @@
+{
+  "name": "textcount",
+  "title": "jQuery Textcount",
+  "description": "A jQuery plugin for counting text (total chars or non html chars) of form field values",
+  "keywords": [
+    "jquery",
+    "forms",
+    "plugins"
+  ],
+  "version": "0.5",
+  "author": {
+    "name": "Chris Casciano",
+    "email": "chris@placenamehere.com",
+    "url": "https://github.com/placenamehere"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://zenorocha.mit-license.org/"
+    }
+  ],
+  "bugs": "https://github.com/placenamehere/textcount/issues",
+  "homepage": "https://github.com/placenamehere/textcount",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}
